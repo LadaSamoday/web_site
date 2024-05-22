@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>hi</title>
+  <link href="{{ url_for('static', filename='css/file.css') }}" rel="stylesheet">
+</head>
+<body >
+  <header >
+    <nav class="blue">
+      <div class="navbar_div">
+        <a href='/about' >О сайте:</a>
+        <a href="/add_note">добавить заметку</a>
+      </div>
+    </nav>
+
+  </header>
+  {%block content%}
+  {%endblock%}
+
+</body>
+</html>

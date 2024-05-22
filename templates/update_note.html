@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+
+{%block content%}
+<form method="POST">
+  {{form.note_name(class="name_style")}}
+  {%if form.errors%}
+    <p style="color: red;"> Должно быть 1-30 символов </p>
+  {% endif %}
+  {{ form.tag }}
+  {{form.note(class="note_style")}}
+  {% for tag in form.tag %}
+    {{ tag }}
+  {% endfor %}
+  {{form.submit(class="button")}}
+
+
+</form>
+{%endblock%}
